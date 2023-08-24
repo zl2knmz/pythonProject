@@ -11,5 +11,5 @@ def hello_world():
 
 if __name__ == "__main__":
     # 这种是不太推荐的启动方式，我这只是做演示用，官方启动方式参见：http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", debug=False)
     # app.run(debug=True)
