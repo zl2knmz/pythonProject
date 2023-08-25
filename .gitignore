@@ -4,3 +4,4 @@
 crawler/__pycache__/
 
 crawler/picture/
+*.pyc
