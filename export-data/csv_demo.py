@@ -2,7 +2,7 @@ import csv
 from elasticsearch import Elasticsearch
 
 
-def export_user_data():
+def export_data():
     # 查看参数配置：https://pypi.org/project/elasticsearch/
     es_client = Elasticsearch(hosts=["192.168.16.225:9200"], sniff_on_start=True, sniff_on_connection_fail=True,
                               sniffer_timeout=60, timeout=60)
@@ -47,11 +47,17 @@ def export_user_data():
             # print(res)
             # csv_writer.writerow([res['_id'] + ',' + res['_source']['title']])
             row = res['_source']
-            csv_writer.writerow([row['id'], row['name'], row['company'], row['job_extra']])
+            company = ''
+            job_extra = ''
+            if row.__contains__("company"):
+                company = row['company']
+            if row.__contains__("job_extra"):
+                job_extra = row['job_extra']
+            csv_writer.writerow([row['id'], row['name'], company, job_extra])
 
     print('success!')
     # print(es_client.info())
 
 
 if __name__ == '__main__':
-    export_user_data()
+    export_data()
