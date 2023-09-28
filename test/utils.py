@@ -8,7 +8,8 @@ def handle_event_logo(logo):
         logo_path = logo_arr[-2]
         # 如果路径中不包含"http"，则添加上https://cdn.huodongxing.com/logo/
         # if not re.search(r"http", logo_path):
-        if not logo_path.__contains__("http"):
+        # if not logo_path.__contains__("http"):
+        if "http" not in logo_path:
             logo_path = "https://cdn.huodongxing.com/logo/" + logo_path
     else:
         logo_path = "https://cdn.huodongxing.com/Content/v2.0/img/event_logo.png"
@@ -16,7 +17,7 @@ def handle_event_logo(logo):
 
 
 def get_featured_list(featured):
-    max_length = 50
+    max_length = 64
     feature_list = []
     result = bin(featured)[2:]
     tmp = list(result)
@@ -31,9 +32,9 @@ def get_featured_list(featured):
 
 if __name__ == '__main__':
     # logo = "http://202306/8706264664900/354904621521242.jpg"
-    # logo = "202306/8706264664900/354904621521242.jpg,202306/8706264664900/924904656977156.jpg,202306/8706264664900/304905448131266.jpg,202306/8706264664900/754933452474291.jpg,202306/8706264664900/654964803030672.jpg,202306/8706264664900/754981702117927.jpg,202306/8706264664900/844981702110713_v2large.jpg,202306/8706264664900/844981702110713_v2.jpg,202306/8706264664900/844981702110713_v2small.jpg"
+    # logo = "202306/8706264664900/354904621521242.jpg,202306/8706264664900/924904656977156.jpg,202306/8706264664900/304905448131266.jpg,202306/8706264664900/754933452474291.jpg,202306/8706264664900/654964803030672.jpg,202306/8706264664900/754981702117927.jpg,202306/8706264664900/844981702110713_v2large.jpg,https//202306/8706264664900/844981702110713_v2.jpg,202306/8706264664900/844981702110713_v2small.jpg"
     # a = handle_event_logo(logo)
     # print(a)
 
-    b = get_featured_list(562949955520512)
+    b = get_featured_list(18014398509486080)
     print(b)
