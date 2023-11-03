@@ -18,6 +18,21 @@ def list_test():
     print(len(list1))
 
 
+def yield_demo():
+    x = 1
+    yield x
+    yield x + 1
+    yield x + 2
+
+
 if __name__ == '__main__':
-    zip_test()
-    list_test()
+    # zip_test()
+    # list_test()
+
+    gene_data = yield_demo()
+    # for i in gene_data:
+    #     print(i)
+    print(next(gene_data))
+    print(next(gene_data))
+    print(next(gene_data))
+
