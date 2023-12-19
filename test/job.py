@@ -34,8 +34,8 @@ def cron():
     # schedule.every().wednesday.at("13:15").do(job)   # 每周三 13：15 时间点运行 job 函数
     # schedule.every().minute.at(":17").do(job)        # 每分钟的 17 秒时间点运行 job 函数
 
-    schedule.every(10).seconds.do(run_threaded, job)
-    schedule.every(5).seconds.do(run_threaded, job1)
+    schedule.every(2).hours.do(run_threaded, job)
+    # schedule.every(5).seconds.do(run_threaded, job1)
 
     while True:
         schedule.run_pending()   # 运行所有可以运行的任务
