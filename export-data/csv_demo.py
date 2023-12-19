@@ -49,11 +49,14 @@ def export_data():
             row = res['_source']
             company = ''
             job_extra = ''
-            if row.__contains__("company"):
+            name = ''
+            if "company" in row:
                 company = row['company']
-            if row.__contains__("job_extra"):
+            if "job_extra" in row:
                 job_extra = row['job_extra']
-            csv_writer.writerow([row['id'], row['name'], company, job_extra])
+            if "name" in row:
+                name = row['name']
+            csv_writer.writerow([row['id'], name, company, job_extra])
 
     print('success!')
     # print(es_client.info())
