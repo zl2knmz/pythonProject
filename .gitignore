@@ -6,3 +6,5 @@ crawler/__pycache__/
 crawler/picture/
 *.pyc
 export-data/input.xlsx
+
+export-data/output.xlsx
