@@ -32,8 +32,9 @@ def merge_and_count_duplicates(excel_path, output_path):
             # 将重复的链接合并成一个字符串
             merged_link = ', '.join(links)
             # 添加合并后的数据到新 DataFrame
-            merged_df = merged_df.append({'id': id, '手机号': phone, '活动链接': merged_link, '发布活动个数': len(links)},
-                                         ignore_index=True)
+            merged_df = merged_df.append(
+                {'id': id, '手机号': phone, '活动链接': merged_link, '发布活动个数': len(links)},
+                ignore_index=True)
         else:
             # 如果没有重复，直接添加原始数据
             merged_df = merged_df.append(group, ignore_index=True)
@@ -45,6 +46,6 @@ def merge_and_count_duplicates(excel_path, output_path):
 
 if __name__ == '__main__':
     # 示例使用方法
-    excel_path1 = 'input.xlsx'  # 替换为你的输入 Excel 文件路径
-    output_path1 = 'output.xlsx'  # 替换为你的输出 Excel 文件路径
+    excel_path1 = 'input.xlsx'  # 替换为你的输入 Excel 文件路径 表头：id、手机号、活动链接
+    output_path1 = 'output.xlsx'  # 替换为你的输出 Excel 文件路径 表头：id、手机号、活动链接、发布活动个数
     merge_and_count_duplicates(excel_path1, output_path1)
