@@ -96,7 +96,11 @@ if __name__ == '__main__':
     # seconds_to_24h = int((datetime.datetime.combine(now.date(), datetime.time.max) - now).total_seconds())
     # print(seconds_to_24h)
 
-    template_str = '<Form max = "4"><Version>1</Version><Items><Item Category="FIELD_COMPANY"><Sort>10001</Sort><Group>-1</Group><Type>input</Type><Required>True</Required><Title>公司</Title></Item><Item><Sort>2</Sort><Group>-1</Group><Type>input</Type><Required>True</Required><Title>联系人VX号</Title></Item><Item><Sort>4</Sort><Group>-1</Group><Type>checkbox</Type><Required>True</Required><Title>您对哪些平台感兴趣</Title><SubItems><Text>Amazon</Text><Text>TikTok</Text><Text>Mercado</Text><Text>TEMU</Text><Text>SHEIN</Text><Text>SHEIN</Text><Text>速卖通</Text><Text>Walmart</Text><Text>其他</Text></SubItems></Item><Item><Sort>3</Sort><Group>-1</Group><Type>checkbox</Type><Required>True</Required><Title>您对哪个话题感兴趣</Title><SubItems><Text>国内电商如何转型跨境</Text><Text>传统工厂如何布局跨境</Text><Text>AI技术在跨境电商的应用</Text><Text>如何做好旺季营销准备</Text><Text>海外直播怎么做</Text><Text>全托管/半托管主题</Text><Text>其他</Text></SubItems></Item></Items></Form>'
-    biz_extra_str = '[{"Key":"I_10001","Value":["橘橙传媒"]},{"Key":"I_2","Value":["1246"]},{"Key":"I_4","Value":["Amazon","TikTok","TEMU","Mercado"]},{"Key":"I_3","Value":["国内电商如何转型跨境"]}]'
-    data = ticket_form_data(template_str, biz_extra_str)
-    print(data)
+    # template_str = '<Form max = "4"><Version>1</Version><Items><Item Category="FIELD_COMPANY"><Sort>10001</Sort><Group>-1</Group><Type>input</Type><Required>True</Required><Title>公司</Title></Item><Item><Sort>2</Sort><Group>-1</Group><Type>input</Type><Required>True</Required><Title>联系人VX号</Title></Item><Item><Sort>4</Sort><Group>-1</Group><Type>checkbox</Type><Required>True</Required><Title>您对哪些平台感兴趣</Title><SubItems><Text>Amazon</Text><Text>TikTok</Text><Text>Mercado</Text><Text>TEMU</Text><Text>SHEIN</Text><Text>SHEIN</Text><Text>速卖通</Text><Text>Walmart</Text><Text>其他</Text></SubItems></Item><Item><Sort>3</Sort><Group>-1</Group><Type>checkbox</Type><Required>True</Required><Title>您对哪个话题感兴趣</Title><SubItems><Text>国内电商如何转型跨境</Text><Text>传统工厂如何布局跨境</Text><Text>AI技术在跨境电商的应用</Text><Text>如何做好旺季营销准备</Text><Text>海外直播怎么做</Text><Text>全托管/半托管主题</Text><Text>其他</Text></SubItems></Item></Items></Form>'
+    # biz_extra_str = '[{"Key":"I_10001","Value":["橘橙传媒"]},{"Key":"I_2","Value":["1246"]},{"Key":"I_4","Value":["Amazon","TikTok","TEMU","Mercado"]},{"Key":"I_3","Value":["国内电商如何转型跨境"]}]'
+    # data = ticket_form_data(template_str, biz_extra_str)
+    # print(data)
+
+    arr1 = ["213", "43123", "31242", "213"]
+    print(arr1)
+    print(list(set(arr1)))
